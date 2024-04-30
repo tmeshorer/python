@@ -189,6 +189,18 @@ class Student:
         self.age = age
     def __repr__(self):
         return repr((self.name, self.grade, self.age))
+    def __str__(self):
+        return f"{name} is {age}"
+    def __eq__(self,other):
+        return self.name == other.name
+    def to_tuple(self):
+        return (self.name,self.age)
+    def __le__(self,other):
+        return self.to_tuple() <= other.to_tuple()
+    def __lt__(self.other):
+        return self.to_tuple() < other.to_tuple()
+
+ 
         
 student1 = Student("1","A",10)
 student2 = Student("1","A",10)
